@@ -137,7 +137,7 @@ class Key(object):
 
     @property
     def short_id(self):
-        return self.id_[-8:].rjust(8, '0')
+        return ucd(self.id_[-8:].rjust(8, b'0'))
 
     @property
     def rpm_id(self):
